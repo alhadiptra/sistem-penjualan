@@ -1,4 +1,4 @@
-FROM php:8.4-cli-alpine
+FROM php:8.1-cli-alpine
 
 # Install depedensi Alpine & extension PHP
 RUN apk add --no-cache icu-dev libzip-dev zip unzip git $PHPIZE_DEPS \

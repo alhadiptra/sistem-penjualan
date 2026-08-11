@@ -454,27 +454,23 @@
                 <h5><i class="fas fa-address-card me-2"></i> Kontak</h5>
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Jl. Mochi No. 123, Padang</span>
+                    <span>Jl. Rimbo Kaluang No.26, Kec. Padang Barat, Kota Padang</span>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <a href="tel:081234567890">0812-3456-7890</a>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:info@mochihaanshop.com">info@mochihaanshop.com</a>
+                    <a href="tel:08995652308">0899-5652-308</a>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
-                    <span>Senin - Sabtu: 08.00 - 20.00</span>
+                    <span>Setiap Hari: 09.00 - 20.00</span>
                 </div>
             </div>
             <div class="col-md-4">
                 <h5><i class="fas fa-share-alt me-2"></i> Ikuti Kami</h5>
                 <div class="social-icons mt-2">
                     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/628995652308" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.tiktok.com/@mochi.hann" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
                 <p class="mt-3" style="font-size: 14px; color: #888;">
                     <i class="fas fa-store me-1" style="color: #ff69b4;"></i>

@@ -123,6 +123,19 @@
         cursor: not-allowed;
     }
 
+    /* ===== PRODUCT DESCRIPTION ===== */
+    .product-description {
+        font-size: 13px;
+        color: #666;
+        margin: 5px 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 38px;
+        line-height: 1.5;
+    }
+
     /* ===== BADGE ===== */
     .badge-premium {
         background: linear-gradient(135deg, #ffd700, #ff8c00);
@@ -385,7 +398,6 @@
                         <div class="product-image">
                             @if($product->gambar)
                                 <img src="{{ asset($product->gambar) }}" alt="{{ $product->nama_produk }}">
-                            @else
                             @endif
                         </div>
                         <div class="product-body">
@@ -398,6 +410,14 @@
                                 @endif
                             </div>
                             <p class="text-muted small">{{ $product->category->nama_kategori }}</p>
+
+                            <!-- ✅ DESKRIPSI PRODUK -->
+                            @if($product->deskripsi)
+                                <p class="product-description">
+                                    {{ Str::limit($product->deskripsi, 60) }}
+                                </p>
+                            @endif
+
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="product-price">Rp {{ number_format($product->harga, 0, ',', '.') }}</span>
                                 <span class="product-stock">
@@ -458,7 +478,7 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <a href="tel:08995652308">0899-5652-308</a>
+                    <a>0899-5652-308</a>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>

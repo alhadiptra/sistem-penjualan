@@ -35,6 +35,19 @@
         color: #d63384;
         font-weight: 600;
     }
+    .btn-outline-danger {
+        border: 2px solid #dc3545;
+        color: #dc3545;
+        border-radius: 50px;
+        padding: 6px 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        background: transparent;
+    }
+    .btn-outline-danger:hover {
+        background: #dc3545;
+        color: white;
+    }
 </style>
 @endpush
 
@@ -93,11 +106,13 @@
                                     </td>
                                     <td>Rp {{ number_format($item->product->harga * $item->qty, 0, ',', '.') }}</td>
                                     <td>
-                                        <form action="{{ route('customer.cart.remove', $item) }}" method="POST" class="d-inline" onsubmit="return confirm('Hapus dari keranjang?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash"></i></button>
-                                        </form>
+                                        <!-- ✅ TOMBOL HAPUS DENGAN SWEETALERT -->
+                                        <button type="button"
+                                                class="btn btn-outline-danger btn-sm btn-delete"
+                                                data-url="{{ route('customer.cart.remove', $item) }}"
+                                                data-name="{{ $item->product->nama_produk }}">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -118,4 +133,37 @@
         </div>
     @endif
 </div>
+
+<!-- ✅ SCRIPT UNTUK SWEETALERT DELETE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-delete').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            const url = this.dataset.url;
+            const name = this.dataset.name;
+
+            Swal.fire({
+                title: 'Hapus dari Keranjang?',
+                text: "Apakah Anda yakin ingin menghapus '" + name + "' dari keranjang?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d63384',
+                cancelButtonColor: '#6c757d',
+                confirmButtonText: 'Ya, Hapus!',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Buat form dan submit
+                    var form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = url;
+                    form.innerHTML = '@csrf @method('DELETE')';
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            });
+        });
+    });
+});
+</script>
 @endsection

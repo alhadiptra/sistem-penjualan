@@ -34,13 +34,6 @@ Route::middleware('guest')->group(function () {
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // ========================================
-// DASHBOARD
-// ========================================
-Route::get('/dashboard/owner', [OwnerDashboardController::class, 'index'])->middleware(['auth', 'role:owner'])->name('owner.dashboard');
-Route::get('/dashboard/admin', [AdminDashboardController::class, 'index'])->middleware(['auth', 'role:admin'])->name('admin.dashboard');
-Route::get('/dashboard/customer', function () { return view('customer.home'); })->middleware(['auth', 'role:customer'])->name('customer.home');
-
-// ========================================
 // ADMIN PANEL
 // ========================================
 Route::middleware(['auth', 'role:admin'])->prefix('admin')->name('admin.')->group(function () {
@@ -64,7 +57,7 @@ Route::middleware(['auth', 'role:owner'])->prefix('owner')->name('owner.')->grou
     Route::get('/reports/daily', [ReportController::class, 'daily'])->name('reports.daily');
     Route::get('/reports/monthly', [ReportController::class, 'monthly'])->name('reports.monthly');
 
-    //pdf
+    // PDF
     Route::get('/reports/daily/pdf', [ReportController::class, 'exportDailyPDF'])->name('reports.daily.pdf');
     Route::get('/reports/monthly/pdf', [ReportController::class, 'exportMonthlyPDF'])->name('reports.monthly.pdf');
 });

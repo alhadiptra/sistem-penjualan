@@ -1,0 +1,599 @@
+/* ===== FONT ===== */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fef6f9;
+    min-height: 100vh;
+}
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(255, 105, 180, 0.15);
+    padding: 12px 0;
+    border-bottom: 2px solid #ffb6c9;
+    z-index: 999;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+    font-size: 24px;
+    color: #d63384 !important;
+}
+
+.navbar-custom .navbar-brand i {
+    color: #ff69b4;
+    margin-right: 10px;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn-pink {
+    background: linear-gradient(135deg, #ff69b4, #d63384);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.btn-pink:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(214, 51, 132, 0.3);
+    color: white;
+}
+
+.btn-outline-pink {
+    border: 2px solid #ff69b4;
+    color: #d63384;
+    border-radius: 50px;
+    padding: 5px 16px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+.btn-outline-pink:hover {
+    background: #ff69b4;
+    color: white;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, #ff69b4, #d63384);
+    color: white !important;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-login:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 25px rgba(214, 51, 132, 0.4);
+    color: white !important;
+}
+
+.btn-register {
+    border: 2px solid #ff69b4;
+    color: #d63384 !important;
+    border-radius: 50px;
+    padding: 10px 30px !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+.btn-register:hover {
+    background: #ff69b4;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+.sidebar {
+    background: white;
+    min-height: calc(100vh - 70px);
+    border-right: 1px solid #f0e0e6;
+    padding: 20px 0;
+}
+
+.sidebar .nav-link {
+    color: #555;
+    padding: 12px 25px;
+    border-radius: 12px;
+    margin: 4px 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+.sidebar .nav-link:hover {
+    background: #fff0f5;
+    color: #d63384;
+}
+.sidebar .nav-link.active {
+    background: linear-gradient(135deg, #ff69b4, #d63384);
+    color: white;
+}
+.sidebar .nav-link i {
+    width: 22px;
+    margin-right: 10px;
+}
+
+/* ========================================
+   STAT CARD (Dashboard)
+   ======================================== */
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #f0e0e6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+.stat-card .icon {
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stat-card .icon-pink {
+    background: #fff0f5;
+    color: #d63384;
+}
+.stat-card .icon-blue {
+    background: #e8f4fd;
+    color: #0c63e4;
+}
+.stat-card .icon-green {
+    background: #e6f9e6;
+    color: #198754;
+}
+.stat-card .icon-orange {
+    background: #fff3e6;
+    color: #e46c0c;
+}
+.stat-card .icon-gold {
+    background: #fff8e1;
+    color: #f57c00;
+}
+.stat-card .number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d1b2e;
+}
+.stat-card .label {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ========================================
+   TABLE
+   ======================================== */
+.table-pink th {
+    background: #fff0f5;
+    color: #d63384;
+    font-weight: 600;
+}
+.table-pink tbody tr:hover {
+    background: #fef6f9;
+}
+
+/* ========================================
+   FORM
+   ======================================== */
+.form-control {
+    border-radius: 12px;
+    padding: 12px 18px;
+    border: 2px solid #f0e0e6;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+.form-control:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.15);
+}
+.form-label {
+    font-weight: 600;
+    color: #2d1b2e;
+    font-size: 14px;
+}
+
+.input-group-text {
+    background: transparent;
+    border: 2px solid #f0e0e6;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    color: #999;
+}
+.input-group .form-control {
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+}
+
+/* ========================================
+   DIVIDER
+   ======================================== */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #ccc;
+    font-size: 13px;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e0d0d6;
+}
+.divider::before {
+    margin-right: 15px;
+}
+.divider::after {
+    margin-left: 15px;
+}
+
+/* ========================================
+   BADGE - ROLE
+   ======================================== */
+.badge-owner {
+    background: #ffc107;
+    color: #212529;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-admin {
+    background: #0c63e4;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-customer {
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ========================================
+   BADGE - KATEGORI PRODUK
+   ======================================== */
+.badge-premium {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-reguler {
+    background: #e0e0e0;
+    color: #555;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ========================================
+   BADGE - STATUS PESANAN
+   ======================================== */
+.badge-menunggu {
+    background: #ffc107;
+    color: #212529;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-diproses {
+    background: #17a2b8;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-siap {
+    background: #6f42c1;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-selesai {
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-batal {
+    background: #dc3545;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ========================================
+   BADGE - STOK
+   ======================================== */
+.badge-stok-aman {
+    background: #d4edda;
+    color: #155724;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-stok-sedikit {
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.badge-stok-habis {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* ========================================
+   MOCHI ICON
+   ======================================== */
+.mochi-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ========================================
+   ALERT
+   ======================================== */
+.alert-danger {
+    border-radius: 12px;
+    background: #fff0f0;
+    border: 1px solid #ffb6c1;
+    color: #c0392b;
+    font-size: 14px;
+    padding: 12px 18px;
+}
+.alert-danger ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* ========================================
+   PRODUCT CARD (Landing)
+   ======================================== */
+.product-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid #fff0f5;
+    margin-bottom: 30px;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(255, 105, 180, 0.15);
+}
+.product-card .product-image {
+    height: 200px;
+    background: #fef6f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    overflow: hidden;
+}
+.product-card .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-card .product-body {
+    padding: 20px;
+}
+.product-card .product-name {
+    font-weight: 600;
+    font-size: 18px;
+    color: #2d1b2e;
+}
+.product-card .product-price {
+    color: #d63384;
+    font-weight: 700;
+    font-size: 20px;
+}
+.product-card .product-stock {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ========================================
+   DELIVERY OPTION (Checkout)
+   ======================================== */
+.delivery-option {
+    border: 2px solid #f0e0e6;
+    border-radius: 16px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+.delivery-option:hover {
+    border-color: #ff69b4;
+    background: #fef6f9;
+}
+.delivery-option.active {
+    border-color: #d63384;
+    background: #fff0f5;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.2);
+}
+.delivery-option input[type="radio"] {
+    accent-color: #d63384;
+    width: 18px;
+    height: 18px;
+}
+.delivery-option .icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* ========================================
+   PAYMENT CARD (Checkout)
+   ======================================== */
+.payment-card {
+    border: 2px solid #f0e0e6;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    text-align: center;
+}
+.payment-card:hover {
+    border-color: #ff69b4;
+    background: #fef6f9;
+}
+.payment-card.active {
+    border-color: #d63384;
+    background: #fff0f5;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.2);
+}
+.payment-card i {
+    font-size: 32px;
+    color: #d63384;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   SUMMARY BOX (Checkout)
+   ======================================== */
+.summary-box {
+    background: #fef6f9;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* ========================================
+   QRIS CONTAINER
+   ======================================== */
+.qris-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 1px solid #f0e0e6;
+}
+.qris-container .amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d63384;
+}
+.qris-container .qr-placeholder {
+    background: #fef6f9;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 20px 0;
+    border: 2px dashed #ffb6c9;
+}
+.qris-container .qr-placeholder i {
+    font-size: 80px;
+    color: #d63384;
+}
+.timer {
+    font-size: 24px;
+    font-weight: 700;
+    color: #dc3545;
+}
+
+/* ========================================
+   CUSTOMER CARD
+   ======================================== */
+.card-custom {
+    border-radius: 20px;
+    border: 1px solid #fff0f5;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    height: 100%;
+}
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(255, 105, 180, 0.15);
+}
+.card-custom i {
+    font-size: 48px;
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+.card-custom h5 {
+    font-weight: 600;
+    color: #2d1b2e;
+}
+.card-custom p {
+    color: #888;
+    font-size: 14px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #f0e0e6;
+    }
+    .stat-card .number {
+        font-size: 20px;
+    }
+    .product-card .product-image {
+        height: 150px;
+    }
+    .qris-container {
+        padding: 20px;
+    }
+    .qris-container .amount {
+        font-size: 24px;
+    }
+}

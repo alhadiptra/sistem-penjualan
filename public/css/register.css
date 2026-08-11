@@ -1,0 +1,72 @@
+/* ========================================
+   REGISTER CONTAINER
+   ======================================== */
+.register-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(214, 51, 132, 0.2);
+    overflow: hidden;
+    max-width: 480px;
+    width: 100%;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+/* ========================================
+   REGISTER HEADER
+   ======================================== */
+.register-header {
+    background: linear-gradient(135deg, #ff69b4, #d63384);
+    padding: 30px 30px;
+    text-align: center;
+    color: white;
+}
+.register-header h3 {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+.register-header p {
+    opacity: 0.9;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ========================================
+   REGISTER BODY
+   ======================================== */
+.register-body {
+    padding: 30px 30px 25px;
+}
+
+/* ========================================
+   PASSWORD HINT
+   ======================================== */
+.password-hint {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+.password-hint i {
+    color: #d63384;
+}
+
+/* ========================================
+   LOGIN LINK
+   ======================================== */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+.login-link a {
+    color: #d63384;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.login-link a:hover {
+    color: #ff69b4;
+    text-decoration: underline;
+}
